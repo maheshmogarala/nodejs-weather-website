@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 const hbs = require('hbs');
 
 
@@ -108,6 +109,6 @@ app.get('*',(req,res)=>{
         name:'Mahesh'
     });
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('Listening on Port 30000');
 });
