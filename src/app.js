@@ -67,7 +67,7 @@ app.get('/weather',(req,res)=>{
         }
         else{
             //console.log('Weather report for : ',location)
-            forecast(latitude,longitude,(error,{temperature,feelslike}={})=>{
+            forecast(latitude,longitude,(error,{temperature,feelslike,precip}={})=>{
                 if(error){
                     return res.send({
                         error
@@ -76,7 +76,8 @@ app.get('/weather',(req,res)=>{
                 
                 res.send({location,
                     temperature,
-                    feelslike
+                    feelslike,
+                    precip
                 })
             })
         }

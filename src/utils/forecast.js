@@ -13,7 +13,8 @@ const forecast = (lati,longi,callback)=>{
             const currentWeather = body.current;
             callback(undefined,{
                 temperature:currentWeather.temperature,
-                feelslike:currentWeather.feelslike
+                feelslike:currentWeather.feelslike,
+                precip: currentWeather.precip
             })
         }
         

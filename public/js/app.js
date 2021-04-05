@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e)=>{
             }
             else{
                 messageOne.textContent=data.location;
-                messageTwo.textContent='Temperature : '+data.temperature;
+                messageTwo.textContent='It is '+data.temperature+" degrees today. But feels like "+data.feelslike+", with "+data.precip+"% chance of rainfall.";
             }
         })
     });
